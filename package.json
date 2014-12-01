@@ -1,0 +1,17 @@
+{
+  "name": "gulp-azure-download",
+  "version": "0.0.1",
+  "description": "Gulp plugin to download files from the Azure blob storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "João Moreno",
+	"keywords": [
+    "gulpplugin",
+    "azure",
+    "blob",
+    "storage"
+  ],
+  "license": "ISC"
+}
