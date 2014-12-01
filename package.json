@@ -1,11 +1,11 @@
 {
-  "name": "gulp-azure-download",
+  "name": "gulp-azure-storage",
   "version": "0.0.1",
-  "description": "Gulp plugin to download files from the Azure blob storage",
+  "description": "Gulp plugin to download and upload files to/from the Azure blob storage",
   "main": "index.js",
   "author": "João Moreno",
   "bin": {
-    "upload-to-azure": "./bin/nodemon.js"
+    "upload-to-azure": "./bin/upload.js"
   },
   "keywords": [
     "gulpplugin",
