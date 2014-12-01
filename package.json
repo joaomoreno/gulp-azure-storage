@@ -7,11 +7,20 @@
     "test": "mocha"
   },
   "author": "João Moreno",
-	"keywords": [
+  "keywords": [
     "gulpplugin",
     "azure",
     "blob",
     "storage"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "azure-storage": "^0.4.1",
+    "event-stream": "^3.1.7",
+    "optimist": "^0.6.1",
+    "progress": "^1.1.8",
+    "queue": "^3.0.10",
+    "vinyl": "^0.4.5",
+    "vinyl-fs": "^0.3.13"
+  }
 }
