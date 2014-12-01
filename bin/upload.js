@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var upload = require('../lib/upload');
 
 var argv = require('optimist')
