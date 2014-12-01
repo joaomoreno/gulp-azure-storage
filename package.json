@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "Gulp plugin to download files from the Azure blob storage",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "author": "João Moreno",
+  "bin": {
+    "upload-to-azure": "./bin/nodemon.js"
+  },
   "keywords": [
     "gulpplugin",
     "azure",
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "azure-storage": "^0.4.1",
+    "delayed-stream": "0.0.6",
     "event-stream": "^3.1.7",
     "optimist": "^0.6.1",
     "progress": "^1.1.8",

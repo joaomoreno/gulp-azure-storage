@@ -1,3 +1,1 @@
-var azure = require('azure-storage');
-
-
+exports.upload = require('./lib/upload');
