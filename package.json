@@ -4,6 +4,10 @@
   "description": "Gulp plugin to download and upload files to/from the Azure blob storage",
   "main": "index.js",
   "author": "João Moreno",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaomoreno/gulp-azure-storage.git"
+  },
   "bin": {
     "upload-to-azure": "./bin/upload.js"
   },
