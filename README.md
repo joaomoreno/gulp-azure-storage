@@ -60,3 +60,5 @@ Mandatory:
 
 Optional:
 - `prefix` - blob name prefix
+- `quiet` - shhh
+- `buffer` - `boolean` for whether to buffer the blobs or stream them
