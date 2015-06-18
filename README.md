@@ -12,28 +12,18 @@ npm install gulp-azure-storage
 ## Usage
 
 ### Upload
+Simply pipe in a gulp stream:
 
-There's a script included with the module that allows you to upload some files to an azure container:
-
-```bash
-$ ./node_modules/.bin/upload-to-azure \
-  --account ACCOUNT_NAME \
-  --key ACCOUNT_KEY \
-  --container CONTAINER_NAME \
-  file1.txt \
-  file2.txt
+```javascript
+gulp.task(['default'], function() { 
+  return gulp.src('path')
+    .pipe(azure.upload({
+    	account:    ACCOUNT_NAME,
+    	key:        ACCOUNT_KEY,
+    	container:  CONTAINER_NAME
+    }));
+});
 ```
-
-You can also provide a **relative** folder to upload every file in that folder structure, instead of every file, one by one:
-
-```bash
-$ ./node_modules/.bin/upload-to-azure \
-  --account ACCOUNT_NAME \
-  --key ACCOUNT_KEY \
-  --container CONTAINER_NAME \
-  folder
-```
-
 ### Download
 
 Simply use it as a gulp source stream:
@@ -43,7 +33,7 @@ var gulp = require('gulp');
 var azure = require('gulp-azure-storage');
 
 gulp.task(['default'], function() {
-  return azure({
+  return azure.download({
   	account:    ACCOUNT_NAME,
   	key:        ACCOUNT_KEY,
   	container:  CONTAINER_NAME
@@ -61,4 +51,4 @@ Mandatory:
 Optional:
 - `prefix` - blob name prefix
 - `quiet` - shhh
-- `buffer` - `boolean` for whether to buffer the blobs or stream them
+- `buffer` - `boolean` for whether to buffer the blobs or stream them (only for download)
