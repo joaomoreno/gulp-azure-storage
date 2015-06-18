@@ -1,15 +1,22 @@
 #!/usr/bin/env node
 
 var upload = require('../lib/upload');
+var es = require('event-stream');
+var vfs = require('vinyl-fs');
 
 var argv = require('optimist')
 	.usage('Usage: $0 --account (account) --key (key) --container (container) [--prefix (prefix)] (file1)...')
 	.demand(['account', 'key', 'container'])
 	.argv;
 
-upload(argv.account, argv.key, argv.container, argv.prefix || '', argv._, function (err) {
-	if (err) {
+vfs.src(argv._, { base: process.cwd() })
+	.pipe(upload({
+		account: argv.account,
+		key: argv.key,
+		container: argv.container,
+		prefix: argv.prefix
+	}))
+	.on('error', function (err) {
 		console.error(err);
 		process.exit(1);
-	}
-});
+	});
