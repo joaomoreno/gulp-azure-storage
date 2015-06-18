@@ -41,6 +41,19 @@ gulp.task(['default'], function() {
 });
 ```
 
+### CLI
+
+There's a script included with the module that allows you to upload some files to an azure container:
+
+```bash
+$ ./node_modules/.bin/upload-to-azure \
+  --account ACCOUNT_NAME \
+  --key ACCOUNT_KEY \
+  --container CONTAINER_NAME \
+  file1.txt \
+  file2.txt
+```
+
 ## Options
 
 Mandatory:
