@@ -16,7 +16,7 @@ Simply pipe in a gulp stream:
 
 ```javascript
 gulp.task(['default'], function() { 
-  return gulp.src('path')
+  return gulp.src('bin/**')
     .pipe(azure.upload({
     	account:    ACCOUNT_NAME,
     	key:        ACCOUNT_KEY,
