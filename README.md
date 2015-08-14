@@ -58,10 +58,10 @@ $ upload-to-azure \
 
 Mandatory:
 - `account`
-- `key`
 - `container`
 
 Optional:
+- `key` - container will be accessed anonymously, if missing
 - `prefix` - blob name prefix
 - `quiet` - shhh
 - `buffer` - `boolean` for whether to buffer the blobs or stream them (only for download)
