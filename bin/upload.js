@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var upload = require('../lib/upload');
-var es = require('event-stream');
 var vfs = require('vinyl-fs');
 
 var argv = require('optimist')
