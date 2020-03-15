@@ -3,9 +3,9 @@
 var upload = require('../lib/upload');
 var vfs = require('vinyl-fs');
 
-var argv = require('optimist')
+var argv = require('yargs')
 	.usage('Usage: $0 --account (account) --key (key) --container (container) [--prefix (prefix)] (file1)...')
-	.demand(['account', 'key', 'container'])
+	.demandOption(['account', 'key', 'container'])
 	.argv;
 
 vfs.src(argv._, { base: process.cwd() })
